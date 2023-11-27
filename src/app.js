@@ -13,7 +13,6 @@ applyMidlwares(app)
 app.use(classRoutes)
 app.use(usersRouts)
 app.use(teachreqRouts)
-
 app.get("/", (req, res) => {
     res.send("It tech is running....");
 });

@@ -1,8 +1,7 @@
 const Service = require("../../../models/class");
  
 const findAll = async (req, res) => {
-    const filter = req.query;
-    const cursor = await Service.find(filter)
+    const cursor = await Service.find()
     res.send(cursor)
 }
 
