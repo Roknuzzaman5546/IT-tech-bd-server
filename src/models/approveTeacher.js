@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const teachreqSchema = new Schema({
+
+const ApproveSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -19,7 +20,7 @@ const teachreqSchema = new Schema({
         type: String,
         required: true
     },
-    email: {
+    status: {
         type: String,
         required: true
     },
@@ -29,5 +30,5 @@ const teachreqSchema = new Schema({
     }
 });
 
-const techrequest = mongoose.model("teachreq", teachreqSchema);
-module.exports = techrequest
+const approveTeacher = mongoose.model("teachers", ApproveSchema);
+module.exports = approveTeacher

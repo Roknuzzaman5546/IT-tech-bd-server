@@ -9,7 +9,6 @@ const applyMidlwares = (app) => {
             CLINT
             // 'https://assingment12-projects-clilnt.web.app',
             // 'http://localhost:5173'
-            // // CLINT
         ],
     }))
     app.use(express.json())

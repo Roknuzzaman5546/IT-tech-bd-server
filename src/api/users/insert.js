@@ -5,11 +5,10 @@ const insertall = async (req, res) => {
     const user = new users({
         name: req.body.name,
         email: req.body.email,
+        image: req.body.image,
         role: req.body.role
     });
-    console.log(user)
     const query = { email: userInfo.email }
-    console.log(query)
     const existingUser = await users.findOne(query)
     if (existingUser) {
         return res.send({ message: "existing already added", insertedId: null })

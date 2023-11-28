@@ -1,7 +1,5 @@
 const { model, Schema } = require("mongoose");
 
-
-
 const ClasseSchema = new Schema({
     "title": {
         type: Number,
