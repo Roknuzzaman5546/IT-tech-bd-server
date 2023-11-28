@@ -1,6 +1,6 @@
 const express = require("express");
 const connectDB = require("./db/connectDb");
-require("dotenv").config();
+require("dotenv").config(); 
 const app = express();
 const port = process.env.PORT || 5000;
 const classRoutes = require('./routs/classes');
@@ -25,13 +25,15 @@ app.all("*", (req, res, next) => {
 
 
 
-const main = async () => {
-    await connectDB();
-    app.listen(port, () => {
-        console.log(`Car Doctor Server is running on port ${port}`);
-    });
+// const main = async () => {
+//     await connectDB();
+//     app.listen(port, () => {
+//         console.log(`Car Doctor Server is running on port ${port}`);
+//     });
 
-}
+// }
 
 
-main()
+// main()
+
+module.exports = app;
