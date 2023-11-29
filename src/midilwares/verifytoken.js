@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config();
 
 const verifytoken = (req, res, next) => {
-    console.log('access token', req.headers.authorization)
     if (!req.headers.authorization) {
         return res.status(401).send({ message: "forbidden access" })
     }
@@ -15,3 +14,5 @@ const verifytoken = (req, res, next) => {
         next();
     })
 }
+
+module.exports = verifytoken

@@ -1,7 +1,8 @@
 const users = require("../../models/user")
 
 const userTeacher = async (req, res) => {
-    const result = await users.updateOne({ role: 'teacher' })
+    const { email } = req.body;
+    const result = await users.updateOne({ email: email }, { role: 'teacher' })
     res.send(result)
 }
 

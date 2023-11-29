@@ -7,7 +7,8 @@ const classRoutes = require('./routs/classes');
 const usersRouts = require('./routs/users')
 const teachreqRouts = require('./routs/teacherrequest')
 const applyMidlwares = require("./midilwares/applyMiddilware");
-const authenticationRouts = require('./routs/authentication')
+const authenticationRouts = require('./routs/authentication');
+const enrolclassRouts = require('./routs/enrolclass/index.')
 
 applyMidlwares(app)
 
@@ -15,7 +16,7 @@ app.use(classRoutes)
 app.use(usersRouts)
 app.use(teachreqRouts)
 app.use(authenticationRouts)
-
+app.use(enrolclassRouts)
 app.get("/", (req, res) => {
     res.send("It tech is running....");
 });

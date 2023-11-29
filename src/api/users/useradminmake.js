@@ -1,8 +1,10 @@
+const { isValidObjectId } = require("mongoose");
 const users = require("../../models/user");
 
 
 const useradminmake = async (req, res) => {
-    const result = await users.updateOne({ role: 'admin' })
+    const { id } = req.body;
+    const result = await users.updateOne({ _id: id }, { role: 'admin' })
     res.send(result)
 }
 
