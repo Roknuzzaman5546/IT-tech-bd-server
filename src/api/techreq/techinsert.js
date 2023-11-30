@@ -7,7 +7,8 @@ const techinsert = async (req, res) => {
         experience: req.body.experience,
         title: req.body.title,
         email: req.body.email,
-        category: req.body.category
+        category: req.body.category,
+        status: req.body.status
     });
     const result = await user.save()
     res.send(result)

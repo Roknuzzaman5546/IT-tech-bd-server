@@ -1,6 +1,7 @@
 const users = require("../../models/user");
 
 
+
 const isteacher = async (req, res) => {
     const email = req.params.email;
     if (email !== req.decoded?.email) {

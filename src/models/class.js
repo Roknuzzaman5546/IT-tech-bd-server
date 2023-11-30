@@ -2,7 +2,7 @@ const { model, Schema } = require("mongoose");
 
 const ClasseSchema = new Schema({
     "title": {
-        type: Number,
+        type: String,
         require: true
     },
     "name": {
@@ -15,11 +15,11 @@ const ClasseSchema = new Schema({
     },
     "prcie": {
         type: Number,
-        require:true
+        require: true
     },
     "shortDescription": {
         type: String,
-        require: true 
+        require: true
     },
     "totalEnrolment": {
         type: Number,
